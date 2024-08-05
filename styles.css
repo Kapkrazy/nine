@@ -1,0 +1,435 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+html, body {
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+img {
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.navbar {
+  background: #fff;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+#navbar-logo {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar:hover {
+  filter: invert(1);
+}
+
+.menu-wrapper {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  display: none;
+}
+
+.menu-wrapper.active {
+  display: flex;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 30vw;
+  height: 85vh;
+  background-color: white;
+  position: sticky;
+}
+
+.navbar-item {
+  height: 60px;
+}
+
+.navbar-links {
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 4rem;
+  height: 100%;
+  font-weight: 200;
+}
+
+hr {
+  width: 30px;
+  margin-left: 4rem;
+}
+
+.navbar-toggle {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 30px;
+  padding-right: 0;
+}
+
+.bar {
+  display: flex;
+  background-color: black;
+  width: 25px;
+  height: 1px;
+  padding: auto auto;
+}
+
+section .hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-text {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  color: gray;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.sec1 {
+  display: flex;
+  width: 100vw;
+  background-color: whitesmoke;
+  height: 400px;
+  align-items: center;
+}
+
+.sec1 img {
+  width: 50vw;
+}
+
+.sec1-text {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  color: gray;
+  gap: 1rem;
+}
+
+.button {
+  border: none;
+  background-color: gray;
+  color: white;
+  width: 6rem;
+  padding: 0.25rem 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.s-box{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 80vh;
+  width: 100vw;
+  padding: 2rem;
+  
+}
+
+.section3{
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+select#options{
+  width: 15rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#options:nth-child(1){
+  text-align: center;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='60px' viewBox='0 0 24 24' width='50px' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50% ;
+}
+
+.modal-popup{
+  top: 20%;
+  left: 35%;
+  position: absolute;
+}
+
+.option1{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  background-color: white;
+  
+}
+
+.option2{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  background-color: white;
+  top: 40%;
+  left: 35%;
+}
+.option3{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  background-color: white;
+  top: 40%;
+  left: 35%;
+}
+
+
+
+#close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.cards{
+  position: absolute;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  top: 5%;
+  width: 100%;
+  z-index: -1;
+  
+}
+.cards-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  padding: 1rem;
+  background-color: gray;
+  gap: 1rem;
+}
+
+.card-middle{
+  position: absolute;
+  top: 50%;
+  left: 42.5vw;
+}
+
+.cards h2, .cards p{
+  color: white;
+
+}
+
+.bottom{
+  position: absolute;
+  display: flex;
+  top:100%;
+  right:10% ;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.cards-wrapper .left{
+  display: flex;
+  height: fit-content;
+}
+
+.cards-wrapper .right{
+  display: flex;
+  width: 350px;
+  height: auto;
+  
+}
+
+.section4{
+  width: 100vw;
+  height: auto;
+  margin-top: 50px;
+  padding: 3rem;
+  background-color: whitesmoke;
+}
+
+.styled-cards{
+  display: flex;
+  justify-content: space-between;
+}
+
+.section4 .styled-card{
+  
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: gray;
+  color: white;
+}
+
+.styled-card p{
+  margin-bottom: 3rem;
+}
+
+.section4 .button{
+  margin-top:auto;
+  position: relative;
+  bottom: 10px;
+  background-color: white;
+  color: gray;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+
+}
+
+.footer-mid{
+  background-color: lightgrey;
+  width: 100%;
+  height: 80%;
+  margin: 10rem;
+  
+}
+
+.footer-overlay.one{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: gray;
+  top: 0;
+  left: 50px;
+}
+
+.footer-overlay.two{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: white;
+  top: 100px;
+  left: 250px;
+}
+
+.footer-overlay.three{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: gray;
+  top: 200px;
+  left: 450px;
+}
+.footer-overlay.four{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: white;
+  top: 300px;
+  left: 650px;
+}
+.footer-overlay.five{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: gray;
+  top: 400px;
+  left:850px;
+}
+
+.footer-overlay.six{
+  position: absolute;
+  height: 150px;
+  width: 250px;
+  background-color: white;
+  top: 500px;
+  left:1050px;
+}
+
+
+
+
